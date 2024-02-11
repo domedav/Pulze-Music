@@ -6,11 +6,13 @@ class AppTheme{
 
   AppTheme(){
     _instance = this;
-
     _themes.addEntries({
       'Dark': ThemeData.from(
-        colorScheme: ColorScheme.dark(
-
+        colorScheme: const ColorScheme.dark(
+          primary: Color.fromRGBO(0x5B, 0x5B, 0x5B, 1.0),
+          onPrimary: Color.fromRGBO(0xDD, 0xDD, 0xDD, 1.0),
+          secondary: Color.fromRGBO(0x30, 0x30, 0x30, 1.0),
+          onSecondary: Color.fromRGBO(0xE9, 0xE9, 0xE9, 1.0),
         ),
         textTheme: TextTheme(
 
@@ -18,8 +20,11 @@ class AppTheme{
         useMaterial3: true,
       ),
       'Light': ThemeData.from(
-        colorScheme: ColorScheme.light(
-
+        colorScheme: const ColorScheme.light(
+          primary: Color.fromRGBO(0xEC, 0xAF, 0x96, 1.0),
+          onPrimary: Color.fromRGBO(0x1E, 0x1E, 0x1E, 1.0),
+          secondary: Color.fromRGBO(0xFF, 0xDC, 0xCA, 1.0),
+          onSecondary: Color.fromRGBO(0x22, 0x22, 0x22, 1.0),
         ),
         textTheme: TextTheme(
 
@@ -28,7 +33,10 @@ class AppTheme{
       ),
       'DarkHighContrast': ThemeData.from(
         colorScheme: ColorScheme.highContrastDark(
-
+          primary: Color.fromRGBO(0x68, 0x68, 0x68, 1.0),
+          onPrimary: Color.fromRGBO(0xFF, 0xFF, 0xFF, 1.0),
+          secondary: Color.fromRGBO(0x18, 0x18, 0x18, 1.0),
+          onSecondary: Color.fromRGBO(0xFF, 0xFF, 0xFF, 1.0),
         ),
         textTheme: TextTheme(
 
@@ -37,7 +45,10 @@ class AppTheme{
       ),
       'LightHighContrast': ThemeData.from(
         colorScheme: ColorScheme.highContrastLight(
-
+          primary: Color.fromRGBO(0xFF, 0x4A, 0x0, 1.0),
+          onPrimary: Color.fromRGBO(0x0, 0x0, 0x0, 1.0),
+          secondary: Color.fromRGBO(0xFF, 0xDC, 0xCA, 1.0),
+          onSecondary: Color.fromRGBO(0x0, 0x0, 0x0, 1.0),
         ),
         textTheme: TextTheme(
 
@@ -49,9 +60,5 @@ class AppTheme{
 
   static ThemeData? getThemeByName(String name){
     return _instance!._themes[name];
-  }
-
-  static ThemeData getCurrentTheme(){
-    return getThemeByName('Dark')!;
   }
 }

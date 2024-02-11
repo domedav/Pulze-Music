@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
       darkTheme: AppTheme.getThemeByName('Dark'),
       highContrastTheme: AppTheme.getThemeByName('LightHighContrast'),
       highContrastDarkTheme: AppTheme.getThemeByName('DarkHighContrast'),
-      color: AppTheme.getCurrentTheme().primaryColor,
       home: HomePage(),
     );
   }
